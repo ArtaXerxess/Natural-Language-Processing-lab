@@ -9,9 +9,3 @@
 ![image](syllabus/nlp_sylb3.png)
 
 
-
-### Workflow:
-
-1. Tokenization
-
-2. Stemming
