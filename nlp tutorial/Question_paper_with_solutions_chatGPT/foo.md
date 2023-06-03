@@ -1,3 +1,6 @@
+
+## 3c. POS Tagging
+
 Part-of-speech (POS) tagging is the process of assigning grammatical labels (such as noun, verb, adjective, etc.) to words in a text corpus. While POS tagging can be a useful task in natural language processing, it does come with certain challenges. Here are some common challenges faced in POS tagging:
 
 1. Ambiguity: Many words in natural language can have multiple meanings or can function as different parts of speech depending on the context. For example, the word "run" can be a noun (e.g., "a morning run") or a verb (e.g., "to run a race"). Resolving such ambiguities accurately can be challenging.
@@ -17,3 +20,26 @@ Part-of-speech (POS) tagging is the process of assigning grammatical labels (suc
 Addressing these challenges often involves training POS taggers on diverse and representative datasets, incorporating contextual information, leveraging morphological features, and using advanced machine learning techniques like neural networks or statistical models.
 
 It's important to note that the field of natural language processing is constantly evolving, and researchers are continuously working to overcome these challenges and improve the accuracy of POS tagging models.
+
+
+## 3b. Yarowski bootstrapping approach to semi supervised learning
+
+The Yarowsky bootstrapping approach is a technique used in semi-supervised learning to leverage a small amount of labeled data along with a larger amount of unlabeled data to improve the performance of a machine learning model. This approach was proposed by David Yarowsky in 1995.
+
+The Yarowsky bootstrapping algorithm follows an iterative process and can be summarized in the following steps:
+
+1. Initialization: Initially, a small labeled dataset is provided, where a subset of the data points is labeled with their corresponding classes. The remaining data points are unlabeled. In addition, a machine learning model, such as a classifier, is also initialized.
+
+2. Training: The model is trained on the labeled data using supervised learning techniques. This step aims to create an initial model that can make predictions based on the available labeled data.
+
+3. Labeling: The trained model is used to predict labels for the unlabeled data points. These predictions are not guaranteed to be accurate since the model is trained on limited labeled data. However, these predictions are treated as pseudo-labels for the unlabeled data.
+
+4. Expansion: The pseudo-labeled data is added to the labeled dataset, increasing the amount of labeled data for the next iteration. The augmented labeled dataset is then used to retrain the model.
+
+5. Iteration: Steps 3 and 4 are repeated for a fixed number of iterations or until convergence is achieved. In each iteration, the model is trained on the expanded labeled dataset, and pseudo-labels are assigned to the unlabeled data based on the current model's predictions.
+
+6. Convergence: The algorithm terminates when the model's performance on the unlabeled data stops improving or reaches a predefined threshold. At this point, the model is considered to have achieved a stable and accurate representation of the data.
+
+The Yarowsky bootstrapping approach takes advantage of the labeled data to train a model initially and then uses the model's predictions on the unlabeled data to iteratively expand the labeled dataset. By gradually incorporating more reliable pseudo-labels into the training process, the model can learn from the initially small labeled dataset and generalize better to the larger unlabeled dataset.
+
+It is important to note that the Yarowsky bootstrapping approach assumes that the initial labeled data is reasonably accurate and that the unlabeled data is representative of the true distribution. Therefore, the effectiveness of the approach heavily relies on the quality and representativeness of the available data.
