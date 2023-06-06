@@ -72,3 +72,18 @@ Here is a simplified explanation of the Hobbs algorithm:
 9. Choose the most likely antecedent: After considering all potential antecedents, the algorithm selects the most likely one based on the applied constraints. The chosen antecedent is then considered the resolved reference for the pronoun.
 
 The Hobbs algorithm provides a systematic approach to pronoun resolution by considering the hierarchical structure of the sentence and incorporating syntactic and semantic cues. However, it has limitations and may not always produce accurate results, especially in cases where there are multiple plausible antecedents or complex sentence structures.
+
+In the Hobbs algorithm, a parse tree represents the syntactic structure of a sentence. To create a parse tree, you can follow these simple steps:
+
+1. Start with the sentence: Take the sentence you want to analyze and break it down into individual words.
+
+2. Identify the parts of speech: Assign a part of speech (such as noun, verb, adjective, etc.) to each word in the sentence. This step helps determine the grammatical role of each word.
+
+3. Determine the sentence structure: Analyze the relationship between words to identify the sentence structure. This involves identifying the subject, verb, and other elements in the sentence.
+
+4. Create a hierarchical structure: Construct a hierarchical structure by grouping words together based on their syntactic relationships. This structure is represented as a tree, with the main sentence at the top and its constituent parts branching out below.
+
+5. Assign labels: Label each node in the parse tree with the appropriate part of speech or syntactic category.
+
+By following these steps, you can create a parse tree that visually represents the syntactic structure of a sentence. The parse tree is then used in the Hobbs algorithm to navigate and analyze the sentence for pronoun resolution.
+
