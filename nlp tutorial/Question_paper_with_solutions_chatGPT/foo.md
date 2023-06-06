@@ -43,3 +43,32 @@ The Yarowsky bootstrapping algorithm follows an iterative process and can be sum
 The Yarowsky bootstrapping approach takes advantage of the labeled data to train a model initially and then uses the model's predictions on the unlabeled data to iteratively expand the labeled dataset. By gradually incorporating more reliable pseudo-labels into the training process, the model can learn from the initially small labeled dataset and generalize better to the larger unlabeled dataset.
 
 It is important to note that the Yarowsky bootstrapping approach assumes that the initial labeled data is reasonably accurate and that the unlabeled data is representative of the true distribution. Therefore, the effectiveness of the approach heavily relies on the quality and representativeness of the available data.
+
+
+## 5B Hobbs Algorithm
+
+[article](https://medium.com/analytics-vidhya/hobbs-algorithm-pronoun-resolution-7620aa1af538)
+
+The Hobbs algorithm is a pronoun resolution algorithm proposed by William A. Hobbs in 1978. It aims to determine the antecedent (the noun phrase to which a pronoun refers) for a pronoun in a given text. The algorithm follows a set of rules based on syntactic and semantic cues to make an educated guess about the intended antecedent.
+
+Here is a simplified explanation of the Hobbs algorithm:
+
+1. Start from the position of the pronoun: The algorithm begins by identifying the pronoun in the text and takes note of its position in the sentence.
+
+2. Traverse the parse tree: The algorithm traverses the parse tree of the sentence, moving upward from the pronoun's position. It follows specific paths in the tree to search for potential antecedents.
+
+3. Move to the nearest noun phrase: The algorithm moves up the parse tree to the nearest noun phrase that could potentially serve as the antecedent. This noun phrase is often found in the sentence containing the pronoun.
+
+4. Check for prepositional phrases: If the noun phrase found in step 3 is followed by a prepositional phrase, the algorithm moves to the prepositional phrase and considers the noun phrase within it as a potential antecedent.
+
+5. Handle relative clauses: If the noun phrase found in step 3 is part of a relative clause (a subordinate clause beginning with a relative pronoun like "who" or "that"), the algorithm moves to the clause and considers the noun phrase within it as a potential antecedent.
+
+6. Handle coordination: If the noun phrase found in step 3 is part of a coordinated structure (e.g., "John and Mary"), the algorithm considers the entire coordination as a potential antecedent.
+
+7. Repeat steps 3-6: The algorithm repeats steps 3 to 6, moving further up the parse tree to find additional potential antecedents.
+
+8. Apply syntactic and semantic constraints: At each potential antecedent, the algorithm applies syntactic and semantic constraints to assess the likelihood of it being the correct antecedent. These constraints can include grammatical agreement, animacy, and discourse coherence.
+
+9. Choose the most likely antecedent: After considering all potential antecedents, the algorithm selects the most likely one based on the applied constraints. The chosen antecedent is then considered the resolved reference for the pronoun.
+
+The Hobbs algorithm provides a systematic approach to pronoun resolution by considering the hierarchical structure of the sentence and incorporating syntactic and semantic cues. However, it has limitations and may not always produce accurate results, especially in cases where there are multiple plausible antecedents or complex sentence structures.
