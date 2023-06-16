@@ -45,6 +45,21 @@ The Yarowsky bootstrapping approach takes advantage of the labeled data to train
 It is important to note that the Yarowsky bootstrapping approach assumes that the initial labeled data is reasonably accurate and that the unlabeled data is representative of the true distribution. Therefore, the effectiveness of the approach heavily relies on the quality and representativeness of the available data.
 
 
+## 5A Word Sense Disambiguation
+Word sense disambiguation, in natural language processing (NLP), may be defined as the ability to determine which meaning of word is activated by the use of word in a particular context. Lexical ambiguity, syntactic or semantic, is one of the very first problem that any NLP system faces. Part-of-speech (POS) taggers with high level of accuracy can solve Word’s syntactic ambiguity. On the other hand, the problem of resolving semantic ambiguity is called WSD (word sense disambiguation). Resolving semantic ambiguity is harder than resolving syntactic ambiguity.
+
+For example, consider the two examples of the distinct sense that exist for the word “bass” −
+
+I can hear bass sound.
+
+He likes to eat grilled bass.
+
+The occurrence of the word bass clearly denotes the distinct meaning. In first sentence, it means frequency and in second, it means fish. Hence, if it would be disambiguated by WSD then the correct meaning to the above sentences can be assigned as follows −
+
+I can hear bass/frequency sound.
+
+He likes to eat grilled bass/fish.
+
 ## 5B Hobbs Algorithm
 
 [article](https://medium.com/analytics-vidhya/hobbs-algorithm-pronoun-resolution-7620aa1af538)
