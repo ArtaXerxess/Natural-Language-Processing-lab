@@ -24,7 +24,7 @@ It's important to note that the field of natural language processing is constant
 
 ## 3b. Yarowski bootstrapping approach to semi supervised learning
 
-The Yarowsky bootstrapping approach is a technique used in semi-supervised learning to leverage a small amount of labeled data along with a larger amount of unlabeled data to improve the performance of a machine learning model. This approach was proposed by David Yarowsky in 1995.
+The Yarowsky bootstrapping approach is a technique used in semi-supervised learning to leverage a small amount of labeled data along with a larger amount of unlabeled data to improve the performance of a machine learning model. It is a method in NLP to improve the accuracy of the classifier used for word sense disambiguation. It works by using a small amount of manually labeled data to train a classifier to automatically label a larger amount of unlabelled data.
 
 The Yarowsky bootstrapping algorithm follows an iterative process and can be summarized in the following steps:
 
